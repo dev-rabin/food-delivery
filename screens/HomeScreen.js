@@ -1,11 +1,16 @@
-import { SafeAreaView, StatusBar, Text, TextInput, View } from "react-native";
+import { SafeAreaView, ScrollView, StatusBar, Text, TextInput, View } from "react-native";
 import * as Icon from "react-native-feather";
-import {themeColors} from "../theme/index"
+import {themeColors} from "../theme/index";
+import Categories from "../screens/Categories.js";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { featured } from "@/constants";
+import FeaturedRow from "./FeaturedRow"
 
 export default function HomeScreen() {
   return (
-    <>
-      <SafeAreaView className="bg-white p-3">
+
+    <GestureHandlerRootView>
+      <SafeAreaView className="p-3">
         <StatusBar barStyle="dark-content" />
 
         {/* Search Bar */}
@@ -24,7 +29,64 @@ export default function HomeScreen() {
             <Icon.Sliders height="21" width="21" strokeWidth={2.5} stroke="white"/>
           </View>
         </View>
+
+
+        {/* Categories */}
+        <Categories/>
+
+        {/* Featured */}
+       <ScrollView>
+       <View className="mt-5">
+        {console.log(featured)}
+          {
+            
+            featured.map((item,index) => {
+              return (
+                <FeaturedRow
+                  key={index}
+                  title = {item.title}
+                  description = {item.description}
+                  restaurants = {item.restaurants}
+                />
+              )
+            })
+          }
+        </View>
+        <View className="mt-5">
+        {console.log(featured)}
+          {
+            
+            featured.map((item,index) => {
+              return (
+                <FeaturedRow
+                  key={index}
+                  title = {item.title}
+                  description = {item.description}
+                  restaurants = {item.restaurants}
+                />
+              )
+            })
+          }
+        </View>
+        <View className="mt-5">
+        {console.log(featured)}
+          {
+            
+            featured.map((item,index) => {
+              return (
+                <FeaturedRow
+                  key={index}
+                  title = {item.title}
+                  description = {item.description}
+                  restaurants = {item.restaurants}
+                />
+              )
+            })
+          }
+        </View>
+       </ScrollView>
       </SafeAreaView>
-    </>
+      </GestureHandlerRootView>
+
   )
 }
