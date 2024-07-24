@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import RestaurantCard from "../screens/RestaurantCard";
+import RestaurantCard from "../components/RestaurantCard";
 
 export default function FeaturedRow({ title, description, restaurants }) {
   return (

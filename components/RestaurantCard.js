@@ -2,10 +2,16 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import * as Icon from "react-native-feather";
+import { useNavigation } from "@react-navigation/native";
 
 export default function RestaurantCard({ item }) {
+
+  const navigation = useNavigation();
+
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback
+    onPress={()=>navigation.navigate('RestaurantScreen', {...item})}
+    >
       <View className="mr-6 bg-white rounded-3xl shadow-lg">
         <Image className="h-36 w-64 rounded-t-3xl" source={item.image} />
         <View className="px-3 pb-4 space-y-2">

@@ -1,17 +1,17 @@
 import { SafeAreaView, ScrollView, StatusBar, Text, TextInput, View } from "react-native";
 import * as Icon from "react-native-feather";
 import {themeColors} from "../theme/index";
-import Categories from "../screens/Categories.js";
+import Categories from "../components/Categories.js";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { featured } from "@/constants";
-import FeaturedRow from "./FeaturedRow"
+import FeaturedRow from "../components/FeaturedRow"
 
 export default function HomeScreen() {
   return (
 
     <GestureHandlerRootView>
-      <SafeAreaView className="p-3">
-        <StatusBar barStyle="dark-content" />
+      <SafeAreaView className="p-2">
+        <StatusBar barStyle="dark-content"/>
 
         {/* Search Bar */}
         <View className="flex-row items-center space-x-2 px-4 pb-2">
