@@ -9,7 +9,6 @@ import FeaturedRow from "../components/FeaturedRow"
 export default function HomeScreen() {
   return (
 
-    <GestureHandlerRootView>
       <SafeAreaView className="p-2">
         <StatusBar barStyle="dark-content"/>
 
@@ -86,7 +85,6 @@ export default function HomeScreen() {
         </View>
        </ScrollView>
       </SafeAreaView>
-      </GestureHandlerRootView>
 
   )
 }

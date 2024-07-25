@@ -3,7 +3,8 @@ import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import * as Icon from "react-native-feather";
 import { themeColors } from "@/theme";
-import DishRow from "../components/DishRow"
+import DishRow from "../components/DishRow";
+import CartIcon from "../components/CartIcon";
 
 export default function RestaurantScreen() {
   const navigation = useNavigation();
@@ -12,7 +13,9 @@ export default function RestaurantScreen() {
   console.log("Restaurant item : ", item);
 
   return (
-    <ScrollView>
+    <View>
+    <CartIcon/>
+    <ScrollView className="mb-20">
       <View className=" relative">
         <Image className="w-full h-72" source={item.image} />
         <TouchableOpacity
@@ -56,6 +59,13 @@ export default function RestaurantScreen() {
           </View>
         </View>
       </View>
+      <View className="bg-white">
+      <Text className=" text-2xl font-bold p-2">Menu</Text>
+      {
+        item.dishes.map((dish, index) => <DishRow item={{...dish}} key={index}/>)
+      }
+      </View>
     </ScrollView>
+    </View>
   );
 }

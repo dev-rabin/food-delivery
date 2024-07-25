@@ -59,8 +59,23 @@ export const featured = [
                         id : 1,
                         name : "Burger",
                         image : require("../assets/images/dishes/download (1) (1).jpeg"),
-                        price : 10
-                    }
+                        price : 10,
+                        description : "Veg Burger with Cheese"
+                    },
+                    {
+                        id : 2,
+                        name : "Burger",
+                        image : require("../assets/images/dishes/download (1) (1).jpeg"),
+                        price : 10,
+                        description : "Veg Burger with Cheese"
+                    },
+                    {
+                        id : 3,
+                        name : "Burger",
+                        image : require("../assets/images/dishes/download (1) (1).jpeg"),
+                        price : 10,
+                        description : "Veg Burger with Cheese"
+                    },
                 ]
             }
         ]
