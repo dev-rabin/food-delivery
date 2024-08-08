@@ -1,11 +1,14 @@
 import { themeColors } from "@/theme";
+import { useNavigation } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native";
 
 
 export default function CartIcon() {
+    const navigation = useNavigation();
     return (
         <View className="absolute bottom-5 w-full z-50">
             <TouchableOpacity
+            onPress={()=>{navigation.navigate("CartScreen")}}
                 style={{ backgroundColor: themeColors.bgColor }}
                 className="flex-row justify-between items-center mx-5 rounded-full p-4 py-3 shadow-lg"
             >
